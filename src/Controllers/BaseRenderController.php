@@ -1,6 +1,6 @@
 <?php
 
-namespace XnzDev\Render\Controller;
+namespace XnzDev\MCurd\Controller;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
