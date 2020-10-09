@@ -2,7 +2,7 @@
 
 namespace {{render_namespace}};
 
-use XnzDev\Render\Controller\BaseRenderController;
+use XnzDev\MCurd\Controller\BaseRenderController;
 
 class RenderController extends BaseRenderController
 {
