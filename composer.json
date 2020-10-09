@@ -6,9 +6,9 @@
             "email": "xnzdev@qq.com"
         }
     ],
-    "keywords": ["laravel", "gii", "code generator", "GUI","CRUD"],
+    "keywords": ["laravel", "xnz", "xnzdev","CRUD"],
     "license":"MIT",
-    "description": "visual code generator tools gii for laravel",
+    "description": "Make CURD with ant design UI for laravel",
     "require": {
         "sebastian/diff": "^3.0",
         "doctrine/dbal": "^2.10"
