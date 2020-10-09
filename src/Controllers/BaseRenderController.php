@@ -20,7 +20,7 @@ class BaseRenderController extends Controller
      */
     public function index() {
 
-        $viewPath = 'fe-render::index';
+        $viewPath = 'xnz_render::index';
 
 
         $appJsVersion = app()['config']->get('fe-render.app_js_version',[]);

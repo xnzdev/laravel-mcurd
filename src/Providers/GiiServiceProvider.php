@@ -27,6 +27,7 @@ class GiiServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/../routes/routes.php');
         // extend views path
         $this->loadViewsFrom(__DIR__.'/../views/', 'xnz_views');
+        $this->loadViewsFrom(__DIR__.'/../views/layouts/', 'xnz_render');
 
         $this->publishes([
             __DIR__.'/../assets' => public_path('/xnz_assets'),
