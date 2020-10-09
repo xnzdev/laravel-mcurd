@@ -1,2 +1,2 @@
 # laravel-mcurd
-source from gii
+CURD for ant design 
