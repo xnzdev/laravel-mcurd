@@ -29,7 +29,7 @@ class GiiServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../views/', 'xnz_views');
 
         $this->publishes([
-            __DIR__.'/../assets' => public_path('/gii_assets'),
-        ], 'laravel-gii');
+            __DIR__.'/../assets' => public_path('/xnz_assets'),
+        ], 'xnz-api');
     }
 }
