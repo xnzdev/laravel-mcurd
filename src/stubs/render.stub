@@ -2,7 +2,7 @@
 
 namespace {{render_namespace}};
 
-use Sunshinev\Render\Controller\BaseRenderController;
+use XnzDev\Render\Controller\BaseRenderController;
 
 class RenderController extends BaseRenderController
 {
