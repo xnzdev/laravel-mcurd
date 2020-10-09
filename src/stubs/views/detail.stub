@@ -35,7 +35,7 @@
                 this.axios
                     .post('{{detail_api}}',JSON.stringify({{{model_key_name}}:this.routeId}))
                     .then(response=>{
-                        this.info = response.data.data
+                        this.info = response.data.result
                     })
             },
             goBack: function() {

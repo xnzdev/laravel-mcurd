@@ -122,9 +122,9 @@
                 this.axios
                     .post('{{list_api}}'+pageStr,JSON.stringify(search_list))
                     .then(response=>{
-                        this.main_data = response.data.data.data,
-                        this.pageTotal = response.data.data.total,
-                        this.pageSize = response.data.data.per_page
+                        this.main_data = response.data.result.data,
+                        this.pageTotal = response.data.result.total,
+                        this.pageSize = response.data.result.per_page
                     })
             },
             invokeChangePage: function(page) {

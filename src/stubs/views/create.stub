@@ -39,7 +39,7 @@
                 this.axios
                     .post('{{save_api}}',JSON.stringify(this.info))
                     .then(response=>{
-                        Object.assign(this.info ,response.data.data)
+                        Object.assign(this.info ,response.data.result)
                     })
             }
         }
