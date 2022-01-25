@@ -93,17 +93,24 @@
     @endforeach
 @endsection
 @section('assets')
-    <link rel="stylesheet"
-          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+{{--    <link rel="stylesheet"--}}
+{{--          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/default.min.css">--}}
+{{--    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>--}}
+{{--    <script>hljs.initHighlightingOnLoad();</script>--}}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.12.1/diff2html.min.js"
-            integrity="sha256-cTH7epla2XtsxlSV0eHjVwQ8WLbvbs57MPtOh4K7DjM=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.12.1/diff2html-ui.min.js"
-            integrity="sha256-08hEwaeqghdW6TAaEo1EGHDC/mrLMaWl6gRlMqV+54I=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.12.1/diff2html.min.css"
-          integrity="sha256-g/AR0iN639QFgl5CwIQoH9JOlWFuPJ2L9kRi+sKOmxA=" crossorigin="anonymous"/>
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.12.1/diff2html.min.js"--}}
+{{--            integrity="sha256-cTH7epla2XtsxlSV0eHjVwQ8WLbvbs57MPtOh4K7DjM=" crossorigin="anonymous"></script>--}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.12.1/diff2html-ui.min.js"--}}
+{{--            integrity="sha256-08hEwaeqghdW6TAaEo1EGHDC/mrLMaWl6gRlMqV+54I=" crossorigin="anonymous"></script>--}}
+{{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.12.1/diff2html.min.css"--}}
+{{--          integrity="sha256-g/AR0iN639QFgl5CwIQoH9JOlWFuPJ2L9kRi+sKOmxA=" crossorigin="anonymous"/>--}}
+
+<link rel="stylesheet" href="{{URL::asset('xnz_assets/highlightjs/default.min.css')}}">
+<script src="{{URL::asset('xnz_assets/highlightjs/highlight.min.js')}}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="{{URL::asset('xnz_assets/diff2html/2.12.1/diff2html.min.js')}}"></script>
+<script src="{{URL::asset('xnz_assets/diff2html/2.12.1/diff2html-ui.min.js')}}"></script>
+<link rel="stylesheet" href="{{URL::asset('xnz_assets/diff2html/2.12.1/diff2html.min.css')}}">
 @endsection
 
 @section('new_vue')

@@ -1,0 +1,10 @@
+<?php
+
+namespace {{render_namespace}};
+
+use XnzDev\MCurd\Controller\BaseRenderController;
+
+class RenderController extends BaseRenderController
+{
+
+}

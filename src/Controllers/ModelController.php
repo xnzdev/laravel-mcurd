@@ -46,14 +46,15 @@ class ModelController extends Controller
                     $response['generate_info'] = ModelBusiness::generateFile($fileList, $waitingFiles);
                 }
             }
+
+            $viewPath = 'xnz_views::model';
+            return response()->view($viewPath, $response);
         }catch (\Exception $exception) {
             $response['alert'] = [
                 'type'    => 'error',
                 'message' => $exception->getMessage()
             ];
         }
-
-        $viewPath = 'xnz_views::model';
-        return response()->view($viewPath, $response);
+        echo json_encode($response);
     }
 }
