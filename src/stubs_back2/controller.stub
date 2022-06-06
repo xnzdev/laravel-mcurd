@@ -14,7 +14,7 @@ class {{controller_class}} extends Controller
 {
 
     /**
-     * {{model_class}} list[数据列表]
+     * {{model_class}} list
      *
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
@@ -32,9 +32,6 @@ class {{controller_class}} extends Controller
      *
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
-     *
-     * @bodyParam {{model_keyname}} required
-     * @response {{model_attributes}}
      */
     public function getDetail(Request $request)
     {
@@ -61,7 +58,7 @@ class {{controller_class}} extends Controller
 
     /**
      * {{model_class}} delete
-     * @bodyParam id required
+     *
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
@@ -76,8 +73,8 @@ class {{controller_class}} extends Controller
 
 
     /**
-     * {{model_class}} batch delete
-     * @bodyParam ids required
+     * {{model_class}} batchDelete
+     *
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */

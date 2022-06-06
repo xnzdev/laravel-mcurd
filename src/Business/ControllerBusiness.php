@@ -155,12 +155,16 @@ class ControllerBusiness extends GenerateBusiness
         $modelClass     = $this->modelClass . 'Model';
         $modelClassName = $this->modelNamespace . '\\' . $modelClass;
 
+        // Get attributes + key
+        $attributes = $this->model->getAttributes();
+
         $fields = [
             '{{model_class_name}}'     => $modelClassName,
             '{{controller_namespace}}' => $this->controllerNamespace,
             '{{controller_class}}'     => $this->controllerClass,
             '{{model_keyname}}'        => $this->modelKeyName,
             '{{model_class}}'          => $modelClass,
+            '{{model_attributes}}'          => json_encode($attributes, JSON_UNESCAPED_UNICODE),
         ];
 
         return self::handleFile($this->controllerNamespace, $this->controllerClass, $fields, $stubFile);

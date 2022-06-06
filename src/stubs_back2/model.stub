@@ -22,7 +22,7 @@ class {{base_model_class}}Model extends {{base_model_class}}
     public static function getListPaging($params, $perPage = 10)
     {
         $cond = self::filterParams($params);
-
+        
         return self::where($cond)->orderBy('updated_at','DESC')->paginate($perPage);
     }
 
@@ -45,14 +45,15 @@ class {{base_model_class}}Model extends {{base_model_class}}
      *
      * @param $id
      * @param bool $isArr
-     * @return model/array
+     * @return mixed
      */
-    public static function getDetailById($id, $isArr = false)
+    public static function getDetailById($id, $isArr = true)
     {
         $info = self::find($id);
         if ($isArr) {
             $info = $info->toArray();
         }
+
         return $info;
     }
 
