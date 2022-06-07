@@ -8,6 +8,8 @@
 
 namespace XnzDev\MCurd\Business;
 
+use Illuminate\Support\Facades\DB;
+
 /**
  * Generate CRUD
  */
@@ -144,6 +146,8 @@ class ControllerBusiness extends GenerateBusiness
         return $ret;
     }
 
+
+
     /**
      * @return array
      */
@@ -165,9 +169,31 @@ class ControllerBusiness extends GenerateBusiness
             '{{model_keyname}}'        => $this->modelKeyName,
             '{{model_class}}'          => $modelClass,
             '{{model_attributes}}'          => json_encode($attributes, JSON_UNESCAPED_UNICODE),
+            '{{save_apidocs}}' => $this->createApiDocsBodyParam(),
         ];
 
         return self::handleFile($this->controllerNamespace, $this->controllerClass, $fields, $stubFile);
+    }
+
+    /**
+     * @return string
+     */
+    private function createApiDocsBodyParam()
+    {
+        $connection = DB::connection('mysql');
+        $schema     = $connection->getDoctrineSchemaManager();
+        $cols = $schema->listTableColumns($this->model->getTable());
+        $str = "";
+        foreach ($cols as $col) {
+            $c = [
+                'name'    => $col->getName(),
+                'type'    => $col->getType()->getName() ?? '', // Use Doctrine convert type
+                'default' => $col->getDefault() ?? '',
+                'comment' => $col->getComment() ?? '',
+            ];
+            $str .= "     * @bodyParam {$c['type']} $" . $c['name'] . " {$c['comment']}\n";
+        }
+        return $str;
     }
 
     /**

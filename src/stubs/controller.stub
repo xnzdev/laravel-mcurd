@@ -48,6 +48,7 @@ class {{controller_class}} extends Controller
     /**
      * {{model_class}} save
      *
+{{save_apidocs}}     *
      * @param Request $request
      */
     public function save(Request $request)
